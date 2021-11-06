@@ -20,7 +20,7 @@ def jugar():
     rostro =cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
     #Realizamos la videocaptura
-    cap = cv2.VideoCapture()
+    cap = cv2.VideoCapture(0)
     cap.set(3,1280)
     cap.set(4,720)
 
