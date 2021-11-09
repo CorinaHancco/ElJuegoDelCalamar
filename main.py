@@ -89,8 +89,8 @@ def jugar():
             #Buscamos los contornos
             contornos, jerarquia = cv2.findContours(copy, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
-            #Mostrar los jugadores vivos
-            cv2.putText(frame, f"JUGADORES VIVOS: {str(jugadores)} ", (400,50), cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255),2)
+            #Mostrar los jugadores restantes
+            cv2.putText(frame, f"JUGADORES RESTANTES: {str(jugadores)} ", (400,50), cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255),2)
 
             #Dibujar los contornos
             for con in contornos:
@@ -124,7 +124,7 @@ def jugar():
                     if dis == 0:
                         contador = contador + muerte
 
-                        #Disminuimos el numero de jugadores vivos
+                        #Disminuimos el numero de jugadoreS restantes
                         jugadores = jugadores - muerte
 
                         #Cambiamos la llave
@@ -135,7 +135,7 @@ def jugar():
                             cerrar()
                 
             # Mostramos los frames
-            cv2.imshow("LUZ VERDE LUZ ROJA", frame)
+            cv2.imshow("ESTATE ATENTO", frame)
 
             # Condicion para romper el while
             t = cv2.waitKey(1)
@@ -167,8 +167,8 @@ def jugar():
             #Buscamos los contornos
             contornos, jerarquia = cv2.findContours(copy, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
-            #Mostrar los jugadores vivos
-            cv2.putText(frame, f"JUGADORES VIVOS: {str(jugadores)} ", (400,50), cv2.FONT_HERSHEY_PLAIN, 2,(0, 255, 0), 2)
+            #Mostrar los jugadores restantes
+            cv2.putText(frame, f"JUGADORES RESTANTES: {str(jugadores)} ", (400,50), cv2.FONT_HERSHEY_PLAIN, 2,(0, 255, 0), 2)
 
             #Dibujar los contornos
             for con in contornos:
@@ -183,7 +183,7 @@ def jugar():
                 cv2.rectangle(frame, (x,y), (x + an, y + al), (0,255,0), 2)
 
             # Mostramos los frames
-            cv2.imshow("LUZ VERDE LUZ ROJA", frame)
+            cv2.imshow("ESTATE ATENTO", frame)
 
             # Condicion para romper el while
             t = cv2.waitKey(1)
@@ -200,7 +200,7 @@ def cerrar():
     # Mostramos la pantalla FinaL
     global pantalla2
     pantalla2 = Toplevel()
-    pantalla2.title("EL JUEGO DEL CALAMAR")
+    pantalla2.title("BEAWARE")
     pantalla2.geometry("1280x720")
     imagen2 = PhotoImage(file="Fin.png")
 
@@ -218,7 +218,7 @@ def cerrar():
 def pantalla_principal():
     global pantalla, entrada
     pantalla = Tk()
-    pantalla.title("EL JUEGO DEL CALAMAR")    #Titulo de la pantalla
+    pantalla.title("BEAWARE")    #Titulo de la pantalla
     pantalla.geometry("1280x720")             #Dimension de la pantalla
     imagen = PhotoImage(file="Fondo.png")     #Leemos la imagen de fondo
 
