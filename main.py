@@ -90,7 +90,7 @@ def jugar():
             contornos, jerarquia = cv2.findContours(copy, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
             #Mostrar los jugadores restantes
-            cv2.putText(frame, f"JUGADORES RESTANTES: {str(jugadores)} ", (400,50), cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255),2)
+            cv2.putText(frame, f"JUGADORES RESTANTES: {str(jugadores)} ", (150,50), cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255),2)
 
             #Dibujar los contornos
             for con in contornos:
@@ -168,7 +168,7 @@ def jugar():
             contornos, jerarquia = cv2.findContours(copy, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
             #Mostrar los jugadores restantes
-            cv2.putText(frame, f"JUGADORES RESTANTES: {str(jugadores)} ", (400,50), cv2.FONT_HERSHEY_PLAIN, 2,(0, 255, 0), 2)
+            cv2.putText(frame, f"JUGADORES RESTANTES: {str(jugadores)} ", (150,50), cv2.FONT_HERSHEY_PLAIN, 2,(0, 255, 0), 2)
 
             #Dibujar los contornos
             for con in contornos:
