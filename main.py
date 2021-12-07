@@ -4,7 +4,7 @@ import sounddevice as sd  #Reproducir sonido
 import soundfile as sf   #Leer sonido
 import threading as th   #Gestionar operaciones paralelas
 import time      #Saber cuando finaliza los audios
-
+import random
 
 
 def jugar():
@@ -47,7 +47,7 @@ def jugar():
         fin = time.time()
         tiempo = int(fin - inicio)
         #Print (tiempo)
-        if tiempo > 6:
+        if tiempo > random.randint(3,6):
             Verde()
 
     #Funcion para preguntar si termino el audio
@@ -55,7 +55,7 @@ def jugar():
         fin = time.time()
         tiempo = int(fin - inicio)
         #Print (tiempo)
-        if tiempo > 6:
+        if tiempo > random.randint(3,6):
             Roja()
     
     #Funcion luz Roja
